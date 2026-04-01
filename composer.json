@@ -10,11 +10,30 @@
         }
     ],
     "require": {
-        "doctrine/orm": "^2.4 || ^3.0"
+        "doctrine/orm": "3.6.x"
     },
     "autoload": {
         "psr-4": {
             "Ovrflo\\JitHydrator\\": ""
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ovrflo\\JitHydrator\\": "",
+            "Doctrine\\Performance\\": "vendor/doctrine/orm/tests/Performance",
+            "Doctrine\\StaticAnalysis\\": "vendor/doctrine/orm/tests/StaticAnalysis",
+            "Doctrine\\Tests\\": "vendor/doctrine/orm/tests/Tests"
+        }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/doctrine/orm"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.5.0 || ^11.5",
+        "psr/log": "^1 || ^2 || ^3",
+        "symfony/cache": "^5.4 || ^6.2 || ^7.0 || ^8.0"
     }
 }
